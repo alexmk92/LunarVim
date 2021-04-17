@@ -8,6 +8,15 @@ vim.cmd([[
 	inoremap <silent><c-s> <c-o>:update<cr><esc>
 ]])
 
+-- Telescope (searching)
+vim.cmd([[
+	nnoremap <leader><leader>b :Telescope buffers<cr>
+	nnoremap <leader><leader>p :Telescope live_grep<cr>
+	nnoremap <leader><leader>f :Telescope find_files<cr>
+	nnoremap <leader><leader>m :Telescope marks<cr>
+	nnoremap <leader><leader>s :Telescope lsp_document_symbols<cr>
+]])
+
 -- Buffer controls
 vim.cmd([[
 	nnoremap X :bd!<cr>
@@ -76,14 +85,6 @@ vim.api.nvim_set_keymap('x', 'J', ':move \'>+1<CR>gv-gv', {noremap = true, silen
 -- Better nav for omnicomplete
 vim.cmd('inoremap <expr> <c-j> (\"\\<C-n>\")')
 vim.cmd('inoremap <expr> <c-k> (\"\\<C-p>\")')
-
-vim.cmd([[
-	nnoremap <C-b> :Telescope buffers<cr>
-	nnoremap <C-p> :Telescope live_grep<cr>
-	nnoremap <C-f> :Telescope find_files<cr>
-	nnoremap <C-m> :Telescope marks<cr>
-	nnoremap <C-s> :Telescope lsp_workspace_symbols<cr>
-]])
 -- vim.cmd('inoremap <expr> <TAB> (\"\\<C-n>\")')
 -- vim.cmd('inoremap <expr> <S-TAB> (\"\\<C-p>\")')
 

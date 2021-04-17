@@ -88,6 +88,7 @@ end
 local lsp_config = {}
 
 function lsp_config.common_on_attach(client, bufnr)
+    require'lsp_signature'.on_attach()
     documentHighlight(client, bufnr)
 end
 

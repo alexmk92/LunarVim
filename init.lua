@@ -18,10 +18,15 @@ require('lv-treesitter')
 require('lv-autopairs')
 require('lv-barbar')
 require('lv-rnvimr')
+require('lv-colorizer')
 
 -- Which Key (Hope to replace with Lua plugin someday)
 vim.cmd('source ~/.config/nvim/vimscript/lv-whichkey/init.vim')
 vim.cmd('source ~/.config/nvim/vimscript/functions.vim')
+vim.cmd('source ~/.config/nvim/vimscript/lv-php-documenter/init.vim')
+vim.cmd('source ~/.config/nvim/vimscript/lv-quickscope/init.vim')
+vim.cmd('source ~/.config/nvim/vimscript/lv-sneak/init.vim')
+vim.cmd('source ~/.config/nvim/vimscript/lv-rainbow-parenthesis/init.vim')
 
 -- LSP
 require('lsp')
@@ -49,4 +54,5 @@ require('lsp.svelte-ls')
 require('lsp.tailwindcss-ls')
 require('lsp.ruby-ls')
 require('lsp.kotlin-ls')
+
 

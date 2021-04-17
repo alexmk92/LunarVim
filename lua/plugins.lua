@@ -40,6 +40,17 @@ return require("packer").startup(
         use {"glepnir/lspsaga.nvim", opt = true}
         use {"kabouzeid/nvim-lspinstall", opt = true}
 
+		-- TODO Find lua alternatives (ported from my old vim file)
+		use {"KenN7/vim-arsync"}
+		use {"alexmk92/vim-snippets"}
+		use {"justinmk/vim-sneak"}
+		use {"unblevable/quick-scope"}
+		use {"sumpygump/php-documentor-vim"}
+		use {"junegunn/rainbow_parentheses.vim"}
+		use {"norcalli/nvim-colorizer.lua"}
+		use {"kshenoy/vim-signature"}
+        use {"tpope/vim-surround"}
+
         -- Tlescope
         use {"nvim-lua/popup.nvim", opt = true}
         use {"nvim-lua/plenary.nvim", opt = true}
@@ -52,6 +63,7 @@ return require("packer").startup(
         use {"hrsh7th/nvim-compe", opt = true}
         use {"hrsh7th/vim-vsnip", opt = true}
         use {"rafamadriz/friendly-snippets", opt = true}
+        use {"tzachar/compe-tabnine", run = "./install.sh" }
 
         -- Teesitter
         use {"nvim-treesitter/nvim-treesitter", run = ":TSUpdate"}
@@ -84,6 +96,9 @@ return require("packer").startup(
         -- Status Line and Bufferline
         use {"glepnir/galaxyline.nvim", opt = true}
         use {"romgrk/barbar.nvim", opt = true}
+
+        -- Autocomplete method signatures
+        use {"ray-x/lsp_signature.nvim", opt = false}
 
         require_plugin("nvim-lspconfig")
         require_plugin("lspsaga.nvim")
