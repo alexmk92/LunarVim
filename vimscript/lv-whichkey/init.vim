@@ -101,20 +101,20 @@ let g:which_key_map.S = {
 
 " g is for git
 let g:which_key_map.g = {
-      \ 'name' : '+git' ,
-      \ 'b' : [':GitBlameToggle'                   , 'blame'],
-      \ 'B' : [':GBrowse'                          , 'browse'],
-      \ 'd' : [':Git diff'                         , 'diff'],
-      \ 'j' : [':NextHunk'                         , 'next hunk'],
-      \ 'k' : [':PrevHunk'                         , 'prev hunk'],
-      \ 'l' : [':Git log'                          , 'log'],
-      \ 'p' : [':PreviewHunk'                      , 'preview hunk'],
-      \ 'r' : [':ResetHunk'                        , 'reset hunk'],
-      \ 'R' : [':ResetBuffer'                      , 'reset buffer'],
-      \ 's' : [':StageHunk'                        , 'stage hunk'],
-      \ 'S' : [':Gstatus'                          , 'status'],
-      \ 'u' : [':UndoStageHunk'                    , 'undo stage hunk'],
-      \ }
+    \ 'name': '+git',
+    \ 'b' : [':Git blame',              'blame'],
+    \ 'd' : [':Gdiffsplit',             'diff'],
+    \ 'lv': [':GV!',                    'log this file'],
+    \ 'll': [':GV',                     'log all'],
+    \ 'l1': [':Git log -1',             'log latest'],
+    \ 'lr': [':GV?',                    'log current file revisions'],
+    \ 'pl': [':Git pull',               'pull'],
+    \ 'pu': [':Git push',               'push'],
+    \ 'ss': [':Git status',             'status'],
+    \ 'st': [':Git stash',              'stash'],
+    \ 'sp': [':Git stash pop',          'stash pop'],
+    \ 'rh': [':Git reset --hard HEAD',  'reset head'],
+    \ }
 
 " l is for language server protocol
 let g:which_key_map.l = {
@@ -129,6 +129,7 @@ let g:which_key_map.l = {
       \ 'l' : [':Lspsaga lsp_finder'                 , 'lsp finder'],
       \ 'L' : [':Lspsaga show_line_diagnostics'      , 'line_diagnostics'],
       \ 'p' : [':Lspsaga preview_definition'         , 'preview definition'],
+	  \ 'j' : [':lua vim.lsp.buf.defition()'         , 'jump definition'],
       \ 'q' : [':Telescope quickfix'                 , 'quickfix'],
       \ 'r' : [':Lspsaga rename'                     , 'rename'],
       \ 'T' : [':LspTypeDefinition'                  , 'type defintion'],

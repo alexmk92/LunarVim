@@ -69,6 +69,11 @@ return require("packer").startup(
         use {"windwp/nvim-autopairs", opt = true}
         use {"terrortylor/nvim-comment", opt = true}
         use {"kevinhwang91/nvim-bqf", opt = true}
+		
+		-- Git
+		use {"mhinz/vim-signify"}
+		use {"tpope/vim-fugitive"}
+		use {"junegunn/gv.vim"}
 
         -- Color
         use {"christianchiarulli/nvcode-color-schemes.vim", opt = true}

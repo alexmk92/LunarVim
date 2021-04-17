@@ -1,11 +1,30 @@
 vim.api.nvim_set_keymap('n', '<Space>', '<NOP>', {noremap = true, silent = true})
-vim.g.mapleader = ' '
+vim.g.mapleader = ','
+
+-- Save
+vim.cmd([[
+	nnoremap <silent><c-s> :<c-u>update<cr>
+	vnoremap <silent><c-s> <c-c>:update<cr>gv
+	inoremap <silent><c-s> <c-o>:update<cr><esc>
+]])
+
+-- Buffer controls
+vim.cmd([[
+	nnoremap X :bd!<cr>
+	vnoremap X :bd!<cr>
+]])
+
+-- Code navigation
+vim.cmd([[
+	nnoremap <silent> K :lua vim.lsp.buf.hover()<CR>
+	nnoremap <silent> <C-]> :lua vim.lsp.buf.definition()<CR>
+]])
 
 -- no hl
 vim.api.nvim_set_keymap('n', '<Leader>h', ':set hlsearch!<CR>', {noremap = true, silent = true})
 
 -- explorer
-vim.api.nvim_set_keymap('n', '<Leader>e', ':NvimTreeToggle<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<Leader>1', ':NvimTreeToggle<CR>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '-', ':RnvimrToggle<CR>', {noremap = true, silent = true})
 
 -- better window movement
@@ -57,6 +76,14 @@ vim.api.nvim_set_keymap('x', 'J', ':move \'>+1<CR>gv-gv', {noremap = true, silen
 -- Better nav for omnicomplete
 vim.cmd('inoremap <expr> <c-j> (\"\\<C-n>\")')
 vim.cmd('inoremap <expr> <c-k> (\"\\<C-p>\")')
+
+vim.cmd([[
+	nnoremap <C-b> :Telescope buffers<cr>
+	nnoremap <C-p> :Telescope live_grep<cr>
+	nnoremap <C-f> :Telescope find_files<cr>
+	nnoremap <C-m> :Telescope marks<cr>
+	nnoremap <C-s> :Telescope lsp_workspace_symbols<cr>
+]])
 -- vim.cmd('inoremap <expr> <TAB> (\"\\<C-n>\")')
 -- vim.cmd('inoremap <expr> <S-TAB> (\"\\<C-p>\")')
 
