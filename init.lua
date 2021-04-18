@@ -21,6 +21,7 @@ require('lv-rnvimr')
 require('lv-colorizer')
 
 -- Which Key (Hope to replace with Lua plugin someday)
+vim.cmd('source ~/.config/nvim/vimscript/lv-floatrem/init.vim')
 vim.cmd('source ~/.config/nvim/vimscript/lv-whichkey/init.vim')
 vim.cmd('source ~/.config/nvim/vimscript/functions.vim')
 vim.cmd('source ~/.config/nvim/vimscript/lv-php-documenter/init.vim')

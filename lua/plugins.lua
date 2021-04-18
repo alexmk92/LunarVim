@@ -42,7 +42,6 @@ return require("packer").startup(
 
 		-- TODO Find lua alternatives (ported from my old vim file)
 		use {"KenN7/vim-arsync"}
-		use {"alexmk92/vim-snippets"}
 		use {"justinmk/vim-sneak"}
 		use {"unblevable/quick-scope"}
 		use {"sumpygump/php-documentor-vim"}
@@ -50,6 +49,12 @@ return require("packer").startup(
 		use {"norcalli/nvim-colorizer.lua"}
 		use {"kshenoy/vim-signature"}
         use {"tpope/vim-surround"}
+
+        -- Snippet engine
+        use {"MarcWeber/vim-addon-mw-utils"}
+        use {"tomtom/tlib_vim"}
+        use {"garbas/vim-snipmate"}
+        use {"alexmk92/vim-snippets"}
 
         -- Tlescope
         use {"nvim-lua/popup.nvim", opt = true}
@@ -61,8 +66,6 @@ return require("packer").startup(
 
         -- Atocomplete
         use {"hrsh7th/nvim-compe", opt = true}
-        use {"hrsh7th/vim-vsnip", opt = true}
-        use {"rafamadriz/friendly-snippets", opt = true}
         use {"tzachar/compe-tabnine", run = "./install.sh" }
 
         -- Teesitter
@@ -73,6 +76,8 @@ return require("packer").startup(
         use "kyazdani42/nvim-tree.lua"
         -- TODO remove when open on dir is supported by nvimtree
         use "kevinhwang91/rnvimr"
+
+        use {"voldikss/vim-floaterm"}
 
         -- use {'lukas-reineke/indent-blankline.nvim', opt=true, branch = 'lua'}
         use {"lewis6991/gitsigns.nvim", opt = true}
