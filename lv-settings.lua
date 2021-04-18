@@ -9,7 +9,7 @@ an executable
 
 -- general
 O.auto_complete = true
-O.colorscheme = 'lunar'
+O.colorscheme = 'gruvbox'
 O.auto_close_tree = 0
 O.wrap_lines = false
 
@@ -50,3 +50,7 @@ O.tsserver.autoformat = true
 O.json.autoformat = true
 
 -- create custom autocommand field (This would be easy with lua)
+
+-- Highlighting of the gutter
+vim.cmd('let &colorcolumn="80,".join(range(120,999),",")')
+vim.cmd('highlight ColorColumn ctermbg=235 guibg=#272C37')
