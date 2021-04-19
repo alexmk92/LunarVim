@@ -41,7 +41,7 @@ return require("packer").startup(
         use {"kabouzeid/nvim-lspinstall", opt = true}
 
 		-- TODO Find lua alternatives (ported from my old vim file)
-		use {"KenN7/vim-arsync"}
+		use {"KenN7/vim-arsync", opt = true}
 		use {"justinmk/vim-sneak"}
 		use {"unblevable/quick-scope"}
 		use {"sumpygump/php-documentor-vim"}
