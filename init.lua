@@ -28,6 +28,7 @@ vim.cmd('source ~/.config/nvim/vimscript/lv-php-documenter/init.vim')
 vim.cmd('source ~/.config/nvim/vimscript/lv-quickscope/init.vim')
 vim.cmd('source ~/.config/nvim/vimscript/lv-sneak/init.vim')
 vim.cmd('source ~/.config/nvim/vimscript/lv-rainbow-parenthesis/init.vim')
+vim.cmd('source ~/.config/nvim/vimscript/lv-vsnip/init.vim')
 
 -- LSP
 require('lsp')

@@ -1,0 +1,116 @@
+{
+	"rfc": {
+		"prefix": "rfc",
+		"body": [
+			"import React, { FC } from 'react'",
+			"",
+			"export type ${1:$TM_DIRECTORY}Props = {",
+			"\t${2:Props}",
+			"}",
+			"",
+			"/**",
+			" * ${1:$TM_DIRECTORY}",
+			" */",
+			"const ${1:$TM_DIRECTORY}: FC<${1:$TM_DIRECTORY}Props> = ({${3:...delegated}}) => {",
+			"\t${4:state}",
+			"\treturn (",
+			"\t\t<${5}>",
+			"\t\t\t${6:children}",
+			"\t\t</${5}>",
+			"\t)",
+			"}",
+			"",
+			"export default ${1:$TM_DIRECTORY}",
+			""
+		],
+		"description": "Functional component template"
+	},
+	"srfc": {
+		"prefix": "srfc",
+		"body": [
+			"import React, { FC } from 'react'",
+			"import { ${1:$TM_DIRECTORY}Wrapper } from './${1:$TM_DIRECTORY}Styles'",
+			"",
+			"export type ${1:$TM_DIRECTORY}Props = {",
+			"\t${2:Props}",
+			"}",
+			"",
+			"/**",
+			" * ${1:$TM_DIRECTORY}",
+			" */",
+			"const ${1:$TM_DIRECTORY}: FC<${1:$TM_DIRECTORY}Props> = ({${3:...delegated}}) => {",
+			"\t${4:state}",
+			"\treturn (",
+			"\t\t<${1:$TM_DIRECTORY}Wrapper>",
+			"\t\t\t${6:children}",
+			"\t\t</${1:$TM_DIRECTORY}Wrapper>",
+			"\t)",
+			"}",
+			"",
+			"export default ${1:$TM_DIRECTORY}",
+			""
+		],
+		"description": "Functional component template wrapped in a styled component"
+	},
+	"styl": {
+		"prefix": "styl",
+		"body": [
+			"import styled from 'styled-components'",
+			"",
+			"export const ${1:$TM_DIRECTORY}Wrapper = styled.${2:div}`",
+			"\t${3:styles}",
+			"`",
+			""
+		],
+		"description": "Exports a styled component wrapper for a given component"
+	},
+	"story": {
+		"prefix": "story",
+		"body": [
+			"import React from 'react'",
+			"import { Story } from '@storybook/react'",
+			"import ${1:$TM_DIRECTORY}, { ${1:$TM_DIRECTORY}Props } from './${1:$TM_DIRECTORY}'",
+			"",
+			"export default {",
+			"\ttitle: '${2:@/components/${3:path}/${1:$TM_DIRECTORY}}'",
+			"\tcomponent: ${1:$TM_DIRECTORY}",
+			"\targTypes: {",
+			"\t\t${3:args}",
+			"\t}",
+			"}",
+			"",
+			"const Template: Story<${1:$TM_DIRECTORY}Props> = (args) => <${1:$TM_DIRECTORY} { ...args } />",
+			"",
+			"export const Default = Template.bind({${4:props}})",
+			"Default.args = { ${5:args} }",
+			""
+		],
+		"description": "Exports a story file for a given component"
+	},
+	"csel": {
+		"prefix": "csel",
+		"body": [
+			"control: {",
+			"\ttype: 'select',",
+			"\toptions: [${1:options}]",
+			"}"
+		],
+		"description": "storybook selection argument"
+	},
+	"ccon": {
+		"prefix": "ccon",
+		"body": [
+			"control: {",
+			"\ttype: 'select',",
+			"}"
+		],
+		"description": "storybook control stub"
+	},
+	"ed": {
+		"prefix": "ed",
+		"body": [
+			"export { default } from './${1:$TM_DIRECTORY}'"
+		],
+		"description": "export { default }"
+	}
+}

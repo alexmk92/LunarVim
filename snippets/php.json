@@ -1,0 +1,53 @@
+{
+	"fnc": {
+		"prefix": "func",
+		"body": [
+			"${1|public,private,protected|} function ${2:funcName}(${3:args}) {",
+			"\t${4}",
+			"}"
+		],
+		"description": "Creates a function signature"
+	},
+	"pufnc": {
+		"prefix": "pufnc",
+		"body": [
+			"public function ${2:funcName}(${3:args}) {",
+			"\t${4}",
+			"}"
+		],
+		"description": "Creates a public function"
+	},
+	"profnc": {
+		"prefix": "profnc",
+		"body": [
+			"protected function ${2:funcName}(${3:args}) {",
+			"\t${4}",
+			"}"
+		],
+		"description": "Creates a protected function"
+	},
+	"prifnc": {
+		"prefix": "prifnc",
+		"body": [
+			"private function ${2:funcName}(${3:args}) {",
+			"\t${4}",
+			"}"
+		],
+		"description": "Creates a private function"
+	},
+	"class": {
+		"prefix": "class",
+		"body": [
+			"/**",
+			" * ${1:${TM_FILENAME_BASE}} class",
+			" */",
+			"class ${1:${TM_FILENAME_BASE}}",
+			"{",
+			"\tpublic function __construct(${2:args}) {",
+			"\t\t${3}",
+			"\t}",
+			"}"
+		],
+		"description": "Creates a basic class"
+	}
+}

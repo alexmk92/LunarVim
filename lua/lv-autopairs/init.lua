@@ -33,7 +33,7 @@ MUtils.completion_confirm = function()
     if vim.fn.pumvisible() ~= 0 then
         if vim.fn.complete_info()["selected"] ~= -1 then
             vim.fn["compe#confirm"]()
-            return npairs.esc("")
+            return t 
         else
             vim.api.nvim_select_popupmenu_item(0, false, false, {})
             vim.fn["compe#confirm"]()
@@ -70,14 +70,8 @@ MUtils.s_tab = function()
     end
 end
 
-MUtils.confirm_complete = function()
-    MUtils.completion_confirm()
-    return t '<S-Tab>'
-end
-    
-
 -- Autocompletion and snippets
-vim.api.nvim_set_keymap('i', '<CR>', 'v:lua.MUtils.confirm_complete()', {expr = true, noremap = true})
+vim.api.nvim_set_keymap('i', '<CR>', 'v:lua.MUtils.completion_confirm()', {expr = true, noremap = true})
 -- imap("<CR>", "v:lua.MUtils.completion_confirm()", {expr = true, noremap = true})
 imap("<Tab>", "v:lua.MUtils.tab()", {expr = true, noremap = true})
 imap("<S-Tab>", "v:lua.MUtils.s_tab()", {expr = true, noremap = true})

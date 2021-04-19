@@ -51,10 +51,8 @@ return require("packer").startup(
         use {"tpope/vim-surround"}
 
         -- Snippet engine
-        use {"MarcWeber/vim-addon-mw-utils"}
-        use {"tomtom/tlib_vim"}
-        use {"garbas/vim-snipmate"}
-        use {"alexmk92/vim-snippets"}
+        use {"hrsh7th/vim-vsnip"}
+        use {"hrsh7th/vim-vsnip-integ"}
 
         -- Tlescope
         use {"nvim-lua/popup.nvim", opt = true}
@@ -114,6 +112,7 @@ return require("packer").startup(
         require_plugin("nvim-dap")
         require_plugin("nvim-compe")
         require_plugin("vim-vsnip")
+        require_plugin("vim-vsnip-integ")
         require_plugin("nvim-treesitter")
         require_plugin("nvim-ts-autotag")
         require_plugin("nvim-tree.lua")
