@@ -13,5 +13,19 @@
 			""
 		],
 		"description": "Creates a pretty comment block"
+	},
+	"script": {
+		"prefix": "<script",
+		"body": [
+			"<script type='${1:text/javascript}'>${2}</script>"
+		],
+		"description": "Create a script tags"
+	},
+	"link": {
+		"prefix": "<link",
+		"body": [
+			"<link rel='${1:stylesheet'}'>${2} />"
+		],
+		"description": "Create a link tag"
 	}
 }

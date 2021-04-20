@@ -40,31 +40,16 @@ return require("packer").startup(
         use {"glepnir/lspsaga.nvim", opt = true}
         use {"kabouzeid/nvim-lspinstall", opt = true}
 
-		-- TODO Find lua alternatives (ported from my old vim file)
-		use {"KenN7/vim-arsync", opt = true}
-		use {"justinmk/vim-sneak"}
-		use {"unblevable/quick-scope"}
-		use {"sumpygump/php-documentor-vim"}
-		use {"junegunn/rainbow_parentheses.vim"}
-		use {"norcalli/nvim-colorizer.lua"}
-		use {"kshenoy/vim-signature"}
-        use {"tpope/vim-surround"}
-
-        -- Snippet engine
-        use {"hrsh7th/vim-vsnip"}
-        use {"hrsh7th/vim-vsnip-integ"}
-
-        -- Tlescope
-        use {"nvim-lua/popup.nvim", opt = true}
-        use {"nvim-lua/plenary.nvim", opt = true}
-        use {"nvim-telescope/telescope.nvim", opt = true}
+        -- Atocomplete
+        use {"hrsh7th/nvim-compe", opt = true}
+        use {"tzachar/compe-tabnine", run = "./install.sh" }
 
         -- Dbugging
         use {"mfussenegger/nvim-dap", opt = true}
 
-        -- Atocomplete
-        use {"hrsh7th/nvim-compe", opt = true}
-        use {"tzachar/compe-tabnine", run = "./install.sh" }
+        -- Snippet engine
+        use {"hrsh7th/vim-vsnip"}
+        use {"hrsh7th/vim-vsnip-integ"}
 
         -- Teesitter
         use {"nvim-treesitter/nvim-treesitter", run = ":TSUpdate"}
@@ -72,20 +57,23 @@ return require("packer").startup(
 
         -- Eplorer
         use "kyazdani42/nvim-tree.lua"
+
         -- TODO remove when open on dir is supported by nvimtree
         use "kevinhwang91/rnvimr"
 
+        -- Virtual terminal
         use {"voldikss/vim-floaterm"}
 
-        -- use {'lukas-reineke/indent-blankline.nvim', opt=true, branch = 'lua'}
+        use {'lukas-reineke/indent-blankline.nvim', opt=true, branch = 'lua'}
         use {"lewis6991/gitsigns.nvim", opt = true}
         use {"liuchengxu/vim-which-key", opt = true}
         use {"ChristianChiarulli/dashboard-nvim", opt = true}
         use {"windwp/nvim-autopairs", opt = true}
         use {"terrortylor/nvim-comment", opt = true}
         use {"kevinhwang91/nvim-bqf", opt = true}
-		
-		-- Git
+        use {"tmux-plugins/vim-tmux-focus-events", opt = true}
+
+        -- Git
 		use {"mhinz/vim-signify"}
 		use {"tpope/vim-fugitive"}
 		use {"junegunn/gv.vim"}
@@ -101,8 +89,39 @@ return require("packer").startup(
         use {"romgrk/barbar.nvim", opt = true}
 
         -- Autocomplete method signatures
-        use {"ray-x/lsp_signature.nvim", opt = false}
+        use {"ray-x/lsp_signature.nvim", opt = true}
 
+        -- Search
+        use {"nvim-lua/popup.nvim", opt = true}
+        use {"nvim-lua/plenary.nvim", opt = true}
+        use {"nvim-telescope/telescope.nvim", opt = true}
+
+		-- TODO Find lua alternatives (ported from my old vim file)
+		use {"KenN7/vim-arsync", opt = true}
+		use {"justinmk/vim-sneak", opt = true}
+		use {"unblevable/quick-scope", opt = true}
+		use {"sumpygump/php-documentor-vim", opt = true}
+		use {"junegunn/rainbow_parentheses.vim", opt = true}
+		use {"norcalli/nvim-colorizer.lua", opt = true}
+		use {"kshenoy/vim-signature", opt = true}
+        use {"tpope/vim-surround", opt = true}
+        use {"aeke/vim-php-cs-fixer", opt = true}
+
+        require_plugin("vim-php-cs-fixer")
+        require_plugin("vim-arsync")
+        require_plugin("vim-sneak")
+        require_plugin("quick-scope")
+        require_plugin("php-documentor-vim")
+        require_plugin("rainbow_parentheses.vim")
+        require_plugin("nvim-colorizer.lua")
+        require_plugin("vim-signature")
+        require_plugin("vim-surround")
+        require_plugin("vim-tmux-focus-events")
+        require_plugin("vim-signify")
+        require_plugin("vim-fugitive")
+        require_plugin("lsp_signature.nvim")
+        require_plugin("gv.vim")
+        require_plugin("rnvimr")
         require_plugin("nvim-lspconfig")
         require_plugin("lspsaga.nvim")
         require_plugin("nvim-lspinstall")
@@ -111,6 +130,7 @@ return require("packer").startup(
         require_plugin("telescope.nvim")
         require_plugin("nvim-dap")
         require_plugin("nvim-compe")
+        require_plugin("compe-tabnine")
         require_plugin("vim-vsnip")
         require_plugin("vim-vsnip-integ")
         require_plugin("nvim-treesitter")
@@ -126,5 +146,7 @@ return require("packer").startup(
         require_plugin("nvim-web-devicons")
         require_plugin("galaxyline.nvim")
         require_plugin("barbar.nvim")
+        require_plugin("floaterm")
+        require_plugin("indent-blankline.nvim")
     end
 )

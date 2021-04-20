@@ -47,5 +47,7 @@ vim.g.dashboard_custom_section = {
     f = {description = {'  Marks              '}, command = 'Telescope marks'}
 }
 
+vim.cmd('let b:indent_blankline_enabled = v:false')
+
 vim.g.dashboard_session_directory = '~/.cache/nvim/session'
 vim.g.dashboard_custom_footer = {'Neovim 0.5.0'}
