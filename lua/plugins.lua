@@ -98,8 +98,6 @@ return require("packer").startup(
 
 		-- TODO Find lua alternatives (ported from my old vim file)
 		use {"KenN7/vim-arsync", opt = true}
-		use {"justinmk/vim-sneak", opt = true}
-		use {"unblevable/quick-scope", opt = true}
 		use {"sumpygump/php-documentor-vim", opt = true}
 		use {"junegunn/rainbow_parentheses.vim", opt = true}
 		use {"norcalli/nvim-colorizer.lua", opt = true}
@@ -107,10 +105,11 @@ return require("packer").startup(
         use {"tpope/vim-surround", opt = true}
         use {"aeke/vim-php-cs-fixer", opt = true}
 
+        use {"puremourning/vimspector", opt = true}
+
         require_plugin("vim-php-cs-fixer")
+        require_plugin("vimspector")
         require_plugin("vim-arsync")
-        require_plugin("vim-sneak")
-        require_plugin("quick-scope")
         require_plugin("php-documentor-vim")
         require_plugin("rainbow_parentheses.vim")
         require_plugin("nvim-colorizer.lua")

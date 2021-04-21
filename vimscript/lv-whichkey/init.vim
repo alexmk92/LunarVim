@@ -48,14 +48,30 @@ let g:which_key_map.b = {
       \ }
 
 " d is for debug
+nmap <F5> <Plug>VimspectorContinue
+nmap <F6> <Plug>VimspectorStepOver
+nmap <F7> <Plug>VimspectorStepInto
+nmap <F8> <Plug>VimspectorStepOut
+nmap <F9> <Plug>VimspectorRunToCursor
+nmap <F10> <Plug>VimspectorUpFrame
+nmap <F11> <Plug>VimspectorDownFrame
+
+map <leader>ds :call vimspector#Launch()<cr>
+
 let g:which_key_map.d = {
       \ 'name' : '+debug' ,
-      \ 'b' : ['DebugToggleBreakpoint '        , 'toggle breakpoint'],
-      \ 'c' : ['DebugContinue'                 , 'continue'],
-      \ 'i' : ['DebugStepInto'                 , 'step into'],
-      \ 'o' : ['DebugStepOver'                 , 'step over'],
-      \ 'r' : ['DebugToggleRepl'               , 'toggle repl'],
-      \ 's' : ['DebugStart'                    , 'start'],
+      \ 'b' : ['vimspector#ToggleBreakpoint()', 'toggle breakpoint ✕'],
+      \ 'r' : ['vimspector#Restart()'         , 'restart debugger ⟲'],
+      \ 's' : ['vimspector#Launch()'          , 'start debugger ▶'],
+      \ 'x' : ['vimspector#Stop()'            , 'stop debugger ■'],
+      \ 'p' : ['vimspector#Pause()'           , 'pause debugger ▷'],
+      \ '<F5>' : ['vimspector#Continue()'       , 'continue =>'],
+      \ '<F6>' : ['vimspector#StepOver()'       , 'step over ↷'],
+      \ '<F7>' : ['vimspector#StepInto()'       , 'step into →'],
+      \ '<F8>' : ['vimspector#StepOut()'        , 'step out ←'],
+      \ '<F9>' : ['vimspector#RunToCursor()'    , 'run to cursor'],
+      \ '<F10>' : ['vimspector#UpFrame()'       , 'move up call stack'],
+      \ '<F11>' : ['vimspector#DownFrame()'     , 'move down call stack'],
       \ }
 
 " F is for fold
