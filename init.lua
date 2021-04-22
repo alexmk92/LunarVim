@@ -17,7 +17,6 @@ require('lv-nvimtree')
 require('lv-treesitter')
 require('lv-autopairs')
 require('lv-barbar')
-require('lv-rnvimr')
 require('lv-colorizer')
 
 -- Which Key (Hope to replace with Lua plugin someday)

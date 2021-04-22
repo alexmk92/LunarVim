@@ -34,7 +34,7 @@ vim.api.nvim_set_keymap('n', '<Leader>h', ':set hlsearch!<CR>', {noremap = true,
 
 -- explorer
 vim.api.nvim_set_keymap('n', '<Leader>1', ':NvimTreeToggle<CR>', {noremap = true, silent = true})
-vim.api.nvim_set_keymap('n', '-', ':RnvimrToggle<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '-', ':NvimTreeToggle<CR>', {noremap = true, silent = true})
 
 -- better window movement
 vim.cmd([[

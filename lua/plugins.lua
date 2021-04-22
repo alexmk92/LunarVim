@@ -58,9 +58,6 @@ return require("packer").startup(
         -- Eplorer
         use "kyazdani42/nvim-tree.lua"
 
-        -- TODO remove when open on dir is supported by nvimtree
-        use "kevinhwang91/rnvimr"
-
         -- Virtual terminal
         use {"voldikss/vim-floaterm"}
 
@@ -120,7 +117,6 @@ return require("packer").startup(
         require_plugin("vim-fugitive")
         require_plugin("lsp_signature.nvim")
         require_plugin("gv.vim")
-        require_plugin("rnvimr")
         require_plugin("nvim-lspconfig")
         require_plugin("lspsaga.nvim")
         require_plugin("nvim-lspinstall")
