@@ -82,7 +82,7 @@ require"lspconfig".efm.setup {
     -- init_options = {initializationOptions},
     cmd = {DATA_PATH .. "/lspinstall/efm/efm-langserver"},
     init_options = {documentFormatting = true, codeAction = false},
-    filetypes = {"lua", "python", "javascriptreact", "javascript", "sh", "html", "css", "json", "yaml", "markdown"},
+    filetypes = {"lua", "python", "javascriptreact", "javascript", "typescript","typescriptreact", "sh", "html", "css", "json", "yaml", "markdown"},
     settings = {
         rootMarkers = {".git/"},
         languages = {
@@ -95,9 +95,11 @@ require"lspconfig".efm.setup {
             css = {prettier},
             json = {prettier},
             yaml = {prettier},
-            markdown = {markdownPandocFormat}
-            -- javascriptreact = {prettier, eslint},
-            -- javascript = {prettier, eslint},
+            markdown = {markdownPandocFormat},
+            javascriptreact = {prettier, eslint},
+            javascript = {prettier, eslint},
+            typescript = tsserver_args,
+			typescriptreact = tsserver_args
             -- markdown = {markdownPandocFormat, markdownlint},
         }
     }

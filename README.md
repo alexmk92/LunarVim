@@ -1,12 +1,11 @@
 ```
-   _..._                             
- .'   (_`.    _                         __     ___           
-:  .      :  | |   _   _ _ __   __ _ _ _\ \   / (_)_ __ ___  
-:)    ()  :  | |  | | | | '_ \ / _` | '__\ \ / /| | '_ ` _ \ 
+   _..._
+ .'   (_`.    _                         __     ___
+:  .      :  | |   _   _ _ __   __ _ _ _\ \   / (_)_ __ ___
+:)    ()  :  | |  | | | | '_ \ / _` | '__\ \ / /| | '_ ` _ \
 `.   .   .'  | |__| |_| | | | | (_| | |   \ V / | | | | | | |
   `-...-'    |_____\__,_|_| |_|\__,_|_|    \_/  |_|_| |_| |_|
 ```
-
 
 [![GitHub license](https://img.shields.io/github/license/ChristianChiarulli/LunarVim)](https://github.com/ChristianChiarulli/LunarVim/blob/master/LICENSE)
 [![Open Source? Yes!](https://badgen.net/badge/Open%20Source%20%3F/Yes%21/blue?icon=github)](https://github.com/ChristianChiarulli/lunarvim)
@@ -68,7 +67,7 @@ yay -S neovim-nightly-git
 - WSL2
 
     Make sure ~/bin is in your path in this case.
-    
+
     ```bash
     curl -sLo/tmp/win32yank.zip https://github.com/equalsraf/win32yank/releases/download/v0.0.4/win32yank-x64.zip
     unzip -p /tmp/win32yank.zip win32yank.exe > /tmp/win32yank.exe
@@ -148,7 +147,7 @@ I recommend you support Free/Libre versions if you plan to use VSCode:
 
 - [VSCodium](https://vscodium.com/)
 
-- Article to get you set up with VSCodium: [link](https://www.chrisatmachine.com/Neovim/22-vscodium-neovim/) 
+- Article to get you set up with VSCodium: [link](https://www.chrisatmachine.com/Neovim/22-vscodium-neovim/)
 
 After installing the [Neovim
 extension](https://github.com/asvetliakov/vscode-neovim) in VSCode

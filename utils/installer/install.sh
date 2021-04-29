@@ -26,7 +26,7 @@ installnodearch() {
 }
 
 installnodefedora() {
-    sudo dnf install -y nodejs 
+    sudo dnf install -y nodejs
     sudo dnf install -y npm
 }
 
@@ -175,3 +175,4 @@ echo "I recommend you also install and activate a font from here: https://github
 # echo "I also recommend you add 'set preview_images_method ueberzug' to ~/.config/ranger/rc.conf"
 
 # echo 'export PATH=/home/$USER/.config/nvcode/utils/bin:$PATH appending to zshrc/bashrc'
+

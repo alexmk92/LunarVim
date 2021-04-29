@@ -42,7 +42,7 @@ return require("packer").startup(
 
         -- Atocomplete
         use {"hrsh7th/nvim-compe", opt = true}
-        use {"tzachar/compe-tabnine", run = "./install.sh" }
+        use {"tzachar/compe-tabnine", run = "./install.sh", requires = 'hrsh7th/nvim-compe' }
 
         -- Dbugging
         use {"mfussenegger/nvim-dap", opt = true}
