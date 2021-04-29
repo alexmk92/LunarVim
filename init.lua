@@ -28,6 +28,7 @@ vim.cmd('source ~/.config/nvim/vimscript/lv-rainbow-parenthesis/init.vim')
 vim.cmd('source ~/.config/nvim/vimscript/lv-vsnip/init.vim')
 vim.cmd('source ~/.config/nvim/vimscript/lv-trim-whitespace/init.vim')
 vim.cmd('source ~/.config/nvim/vimscript/lv-php-cs-fixer/init.vim')
+vim.cmd('source ~/.config/nvim/vimscript/lv-vim-fugitive/init.vim')
 
 -- LSP
 require('lsp')

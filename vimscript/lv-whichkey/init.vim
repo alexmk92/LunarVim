@@ -130,6 +130,10 @@ let g:which_key_map.g = {
     \ 'st': [':Git stash',              'stash'],
     \ 'sp': [':Git stash pop',          'stash pop'],
     \ 'rh': [':Git reset --hard HEAD',  'reset head'],
+    \ 'h':  [':diffget //3',            'accept diff right'],
+    \ 'u':  [':diffget //2',            'accept diff left'],
+    \ 'x':  [':diffput 1',              'accept current buffer'],
+    \ 'si': [':G',                      'git']
     \ }
 
 " l is for language server protocol
